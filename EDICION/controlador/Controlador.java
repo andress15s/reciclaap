@@ -24,7 +24,7 @@ public class Controlador implements ActionListener
     {
        
         this.venPrin = venPrin;
-        this.venPrin.miPanelOperaciones.agregarOyentesBotones(this);
+        this.venPrin.miPanelEntradaDatos.agregarOyentesBotones(this);
         
     }
     
@@ -39,30 +39,27 @@ public class Controlador implements ActionListener
 
    
 
-        if(comando.equals("Animal"))
+        if(comando.equals("info"))
         {   
-            venPrin.crearVentanaAnimal();
-            this.venPrin.miAnimal.agregarOyentesBotones(this);
+            venPrin.crearVentanaInformacion();
+            this.venPrin.miInfo.agregarOyentesBotones(this);
         }
 
-        if(comando.equals("Pareja"))
+        if(comando.equals("Guia"))
         {   
-            venPrin.crearVentanaPareja();
-            this.venPrin.miPareja.agregarOyentesBotones(this);
+            venPrin.crearVentanaGuia();
+            this.venPrin.miGuia.agregarOyentesBotones(this);
         }
 
-        
+    
 
-        
-
-        if(comando.equals("Fruta"))
+        if(comando.equals("Centros"))
         {   
-            venPrin.crearVentanaFruta();
-            this.venPrin.miFruta.agregarOyentesBotones(this);
+            venPrin.crearVentanaCentros();
+            this.venPrin.miCentros.agregarOyentesBotones(this);
         }
 
       
-    
 
         if(comando.equals("salir"))
         {

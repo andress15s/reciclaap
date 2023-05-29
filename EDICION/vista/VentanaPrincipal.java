@@ -1,6 +1,8 @@
 package vista;
 
 import javax.swing.JFrame;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 
 
@@ -11,11 +13,10 @@ public class VentanaPrincipal extends JFrame
     //----------------------
   
     public PanelEntradaDatos miPanelEntradaDatos;
-    public PanelOperaciones miPanelOperaciones;
-    public Animal miAnimal;
+    public Informacion miInfo;
+    public Guia miGuia;
+    public Centros miCentros;
     
-    public Fruta miFruta;
-    public Pareja miPareja;
     
  
 
@@ -34,44 +35,51 @@ public class VentanaPrincipal extends JFrame
 
         //Creación y adición del PanelEntradaDatos
         miPanelEntradaDatos = new PanelEntradaDatos();
-        miPanelEntradaDatos.setBounds(10,10,680,270);
+        miPanelEntradaDatos.setBounds(2,10,780,480);
         add(miPanelEntradaDatos);
        
         
-        //Creación y adición del PanelOperaciones
-        miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,290,560,440);
-        add(miPanelOperaciones);
+   
         
 
         //Caracteristicas de la ventana
         setTitle("RECICLAAP");
-        setSize(600,500);
+        setSize(800,520);
         //setLocation(10,10);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
         setVisible(true);
+       
         
-    
+       
+        
+        
+        //icono de la ventana
+        Image icon = new ImageIcon(getClass().getResource("imagenes/icono.png")).getImage();
+            setIconImage(icon);
+
     }
 
-    public void crearVentanaAnimal()
+    public void crearVentanaInformacion()
     {
-        miAnimal = new Animal();
+        miInfo = new Informacion();
+        this.setState(JFrame.ICONIFIED);
     }
 
     
-    public void crearVentanaFruta()
+    public void crearVentanaGuia()
     {
-        miFruta = new Fruta();
+        miGuia = new Guia();
+        this.setState(JFrame.ICONIFIED);
     }
 
-    
+   
 
-    public void crearVentanaPareja()
+    public void crearVentanaCentros()
     {
-        miPareja = new Pareja();
+        miCentros = new Centros();
+        this.setState(JFrame.ICONIFIED);
     }
 
 }

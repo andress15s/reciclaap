@@ -7,6 +7,7 @@ import javax.swing.JTextField;
 
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionListener;
 import java.awt.Color;
 
 
@@ -18,13 +19,12 @@ public class PanelEntradaDatos extends JPanel
     private ImageIcon iImagen;
     private JLabel lbImagen;
     private ImageIcon iImagen2;
-    public JButton btRegistro;
     private JLabel lbImagen2;
-    
-  
-    private JTextField tfNombre;
-    private JTextField tfEdad;
+    private JButton btInfo;
+    private JButton btCentros;
+    private JButton btGuia;
 
+    Color color = new Color(180, 198, 169);
     
     //------------------------
     //Metodos
@@ -39,39 +39,66 @@ public class PanelEntradaDatos extends JPanel
         
         //Creación y adicion de la imagen
 
-      
-
-        iImagen = new ImageIcon(getClass().getResource(""));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/FONDO.PNG"));
         lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(310,75,250,276);
+        lbImagen.setBounds(0,0,780,450);
         add(lbImagen);
 
-        iImagen = new ImageIcon(getClass().getResource("imagenes/Titulo.PNG"));
-        lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(80,100,400,180);
-        add(lbImagen);
+        //crear y agragar boton informacion general
+        btInfo = new JButton("<html>>Información<br>General</html>");
+        btInfo.setFont(new Font("Algerian", Font.BOLD, 10));
+        btInfo.setBounds(58, 310, 120, 70);
+        lbImagen.add(btInfo);
+        btInfo.setOpaque(false);
+        btInfo.setContentAreaFilled(false);
+        btInfo.setBorderPainted(false);
+        btInfo.setActionCommand("info");
 
+
+        //crear y agragar boton centros 
+        btCentros = new JButton("<html>>Centros de <br> Reciclaje</html>");
+        btCentros.setFont(new Font("Algerian", Font.BOLD, 10));
+        btCentros.setBounds(220, 310, 120, 70);
+        lbImagen.add(btCentros);
+        btCentros.setOpaque(false);
+        btCentros.setContentAreaFilled(false);
+        btCentros.setBorderPainted(false);
+        btCentros.setActionCommand("Centros");
+
+        //crear y agragar boton guia
+        btGuia = new JButton("<html>>Guía de <br> Reciclaje</html>");
+        btGuia.setFont(new Font("Algerian", Font.BOLD, 10));
+        btGuia.setBounds(380, 310, 120, 70);
+        lbImagen.add(btGuia);
+        btGuia.setOpaque(false);
+        btGuia.setContentAreaFilled(false);
+        btGuia.setBorderPainted(false);
+        btGuia.setActionCommand("Guia");
+
+
+         
         
-        //imajen de fondo
-
-        iImagen2 = new ImageIcon(getClass().getResource("imagenes/fondo.jpeg"));
-        lbImagen2 = new JLabel(iImagen2);
-        lbImagen2.setBounds(0,0,550,276);
-        lbImagen2.setIcon(new ImageIcon(iImagen2.getImage().getScaledInstance(540, 280, Image.SCALE_SMOOTH)));
-        add(lbImagen2);
-  
     }
+
+    public void agregarOyentesBotones(ActionListener pAL)
+    {
+        btInfo.addActionListener(pAL);
+        btCentros.addActionListener(pAL);
+        btGuia.addActionListener(pAL);
+
+    }
+
+    //activar boton
+    public void activarBotonInfo()
+    {
+        btInfo.setEnabled(true);
+        btCentros.setEnabled(true);
+        btGuia.setEnabled(true);
+    }
+
     
-    //Metodos de acceso a la información de las cajas de texto
-    public String getNomUsu()
-    {
-        return (String) tfNombre.getText();
-    }
-
-    public String getEdadUsuario()
-    {
-        return (String) tfEdad.getText();
-    }
+  
+   
 
 
 
