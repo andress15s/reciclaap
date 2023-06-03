@@ -34,22 +34,22 @@ public class VentanaPrincipal extends JFrame
        
 
         //Creación y adición del PanelEntradaDatos
+        //Creación de los panele entrada de datos
         miPanelEntradaDatos = new PanelEntradaDatos();
-        miPanelEntradaDatos.setBounds(2,10,780,480);
-        add(miPanelEntradaDatos);
+        miPanelEntradaDatos.setBounds(0,0,900,500);
+        this.add(miPanelEntradaDatos);
        
         
    
         
 
         //Caracteristicas de la ventana
-        setTitle("RECICLAAP");
-        setSize(800,520);
-        //setLocation(10,10);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setResizable(false);
-        setVisible(true);
+        this.setTitle("RECICLAAPP");
+        this.setSize(900,500);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setResizable(false);
+        this.setVisible(true);
        
         
        
@@ -64,14 +64,14 @@ public class VentanaPrincipal extends JFrame
     public void crearVentanaInformacion()
     {
         miInfo = new Informacion();
-        this.setState(JFrame.ICONIFIED);
+       
     }
 
     
     public void crearVentanaGuia()
     {
         miGuia = new Guia();
-        this.setState(JFrame.ICONIFIED);
+       
     }
 
    
@@ -79,8 +79,16 @@ public class VentanaPrincipal extends JFrame
     public void crearVentanaCentros()
     {
         miCentros = new Centros();
-        this.setState(JFrame.ICONIFIED);
+       
+        
+        
     }
+
+    //cerrar la ventana y abri la ventana de inicio
+    
+
+
+ 
 
 }
 

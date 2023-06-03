@@ -59,7 +59,56 @@ public class Controlador implements ActionListener
             this.venPrin.miCentros.agregarOyentesBotones(this);
         }
 
-      
+        if(comando.equals("ideas"))
+        {   
+            //abrir una pagina web con el navegador por defecto
+            try
+            {
+                Runtime.getRuntime().exec("cmd.exe /c start https://blog.oxfamintermon.org/5-ideas-de-reciclaje-creativo/");
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "No se pudo abrir la pagina web");
+            }
+            
+            
+            
+        }
+
+        if(comando.equals("volver"))
+        {   
+            
+            venPrin.miGuia.cerrarVentanaGuia();
+
+           
+        }
+
+        if(comando.equals("tipos"))
+        {   
+            
+           
+
+           
+        }
+
+        if(comando.equals("info"))
+        {   
+            //abrir una pagina web con el navegador por defecto
+            try
+            {
+                Runtime.getRuntime().exec("cmd.exe /c start https://www.ecoembes.com/es/residuos");
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "No se pudo abrir la pagina web");
+            }
+            
+            
+           
+
+           
+        }
+       
 
         if(comando.equals("salir"))
         {

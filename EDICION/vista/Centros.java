@@ -31,15 +31,12 @@ public class Centros extends JDialog
         setLayout(null);
             
         
-        iImagen = new ImageIcon(getClass().getResource("imagenes/Titulo.PNG"));
-        lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(100,20,400,50);
-        add(lbImagen);
+        
 
        
 
         //Caracteristicas de la ventana
-        setTitle("Parejas");
+        setTitle("");
         setSize(610,680);
         setLocationRelativeTo(null);
         setResizable(false);

@@ -38,16 +38,15 @@ public class PanelEntradaDatos extends JPanel
         //setBackground(new Color(185, 180, 179));
         
         //Creación y adicion de la imagen
-
-        iImagen = new ImageIcon(getClass().getResource("imagenes/FONDO.PNG"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/FONDO.png"));
         lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(0,0,780,450);
-        add(lbImagen);
+        lbImagen.setBounds(0,0,900,500);
+        this.add(lbImagen);
 
         //crear y agragar boton informacion general
-        btInfo = new JButton("<html>>Información<br>General</html>");
+        btInfo = new JButton("");
         btInfo.setFont(new Font("Algerian", Font.BOLD, 10));
-        btInfo.setBounds(58, 310, 120, 70);
+        btInfo.setBounds(58, 345, 125, 70);
         lbImagen.add(btInfo);
         btInfo.setOpaque(false);
         btInfo.setContentAreaFilled(false);
@@ -56,19 +55,19 @@ public class PanelEntradaDatos extends JPanel
 
 
         //crear y agragar boton centros 
-        btCentros = new JButton("<html>>Centros de <br> Reciclaje</html>");
+        btCentros = new JButton("");
         btCentros.setFont(new Font("Algerian", Font.BOLD, 10));
-        btCentros.setBounds(220, 310, 120, 70);
+        btCentros.setBounds(260, 345, 120, 70);
         lbImagen.add(btCentros);
         btCentros.setOpaque(false);
         btCentros.setContentAreaFilled(false);
-        btCentros.setBorderPainted(false);
+        btCentros.setBorderPainted(false); 
         btCentros.setActionCommand("Centros");
 
         //crear y agragar boton guia
-        btGuia = new JButton("<html>>Guía de <br> Reciclaje</html>");
+        btGuia = new JButton("");
         btGuia.setFont(new Font("Algerian", Font.BOLD, 10));
-        btGuia.setBounds(380, 310, 120, 70);
+        btGuia.setBounds(450, 345, 120, 70);
         lbImagen.add(btGuia);
         btGuia.setOpaque(false);
         btGuia.setContentAreaFilled(false);
