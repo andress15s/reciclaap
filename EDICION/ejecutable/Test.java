@@ -11,7 +11,5 @@ public class Test
         VentanaPrincipal venPrin = new VentanaPrincipal();
         Controlador miControlador = new Controlador(venPrin);
 
-     
-        
     }
 }

@@ -46,9 +46,16 @@ public class Informacion extends JDialog
         btInfo.setOpaque(false);
         btInfo.setContentAreaFilled(false);
         btInfo.setBorderPainted(false);
-        btInfo.setActionCommand("info");
+        btInfo.setActionCommand("masinfo");
 
-        
+        //crear boton volver
+        btVolver = new JButton("");
+        btVolver.setBounds(740, 430, 140, 50);
+        lbImagen.add(btVolver);
+        btVolver.setOpaque(false);
+        btVolver.setContentAreaFilled(false);
+        btVolver.setBorderPainted(false);
+        btVolver.setActionCommand("volver2");
         
         
 
@@ -76,6 +83,11 @@ public class Informacion extends JDialog
         btInfo.setEnabled(true);
         btVolver.setEnabled(true);
 
+    }
+
+    public void cerrarVentanaInfo()
+    {
+        this.dispose();
     }
 
  

@@ -16,7 +16,7 @@ public class VentanaPrincipal extends JFrame
     public Informacion miInfo;
     public Guia miGuia;
     public Centros miCentros;
-    
+    public Materiales miMateriales;
     
  
 
@@ -64,14 +64,12 @@ public class VentanaPrincipal extends JFrame
     public void crearVentanaInformacion()
     {
         miInfo = new Informacion();
-       
     }
 
     
     public void crearVentanaGuia()
     {
         miGuia = new Guia();
-       
     }
 
    
@@ -84,7 +82,10 @@ public class VentanaPrincipal extends JFrame
         
     }
 
-    //cerrar la ventana y abri la ventana de inicio
+    public void crearVentanaMateriales()
+    {
+        miMateriales = new Materiales();
+    }
     
 
 

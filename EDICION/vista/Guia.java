@@ -22,7 +22,8 @@ public class Guia extends JDialog
     private JButton btIdeas;
     private JButton btVolver;
     private JButton btTipos;
-   
+    
+    
     
     
     //-------------------------
@@ -95,10 +96,11 @@ public class Guia extends JDialog
       
     }
 
+    
+
     public void cerrarVentanaGuia()
     {
         this.dispose();
-       
     }
 
 
@@ -108,7 +110,6 @@ public class Guia extends JDialog
         btIdeas.setEnabled(true);
         btVolver.setEnabled(true);
         btTipos.setEnabled(true);
-        
     }
 
 }

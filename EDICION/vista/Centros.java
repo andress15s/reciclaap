@@ -18,6 +18,7 @@ public class Centros extends JDialog
     //----------------------
     private ImageIcon iImagen;
     private JLabel lbImagen;
+    private JButton btVolver;
    
     
     //-------------------------
@@ -29,6 +30,25 @@ public class Centros extends JDialog
     {
         //Definición del contenedor de la ventana
         setLayout(null);
+
+        //fondo de la ventana
+        iImagen = new ImageIcon(getClass().getResource("imagenes/CENTROS.PNG"));
+        lbImagen = new JLabel(iImagen);
+        lbImagen.setBounds(0,0,900,500);
+        add(lbImagen);
+
+        //crear boton volver
+        btVolver = new JButton("");
+        btVolver.setBounds(708, 430, 140, 50);
+        lbImagen.add(btVolver);
+        btVolver.setOpaque(false);
+        btVolver.setContentAreaFilled(false);
+        btVolver.setBorderPainted(false);
+        btVolver.setActionCommand("volver3");
+
+
+
+
             
         
         
@@ -37,7 +57,7 @@ public class Centros extends JDialog
 
         //Caracteristicas de la ventana
         setTitle("");
-        setSize(610,680);
+        setSize(900,535);
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
@@ -47,15 +67,19 @@ public class Centros extends JDialog
     //agregar oyentes a los botones
     public void agregarOyentesBotones(ActionListener pAL)
     {
-        
+        btVolver.addActionListener(pAL);
     }
 
     //activar los botones
     public void activarBotones()
     {
-        
+        btVolver.setEnabled(true);  
     }
 
+    public void cerrarVentanaCentros()
+    {
+        dispose();
+    }
  
         
     

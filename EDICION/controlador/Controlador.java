@@ -51,6 +51,13 @@ public class Controlador implements ActionListener
             this.venPrin.miGuia.agregarOyentesBotones(this);
         }
 
+        if(comando.equals("tipos"))
+        {   
+            //crear ventana materiales
+            venPrin.crearVentanaMateriales();
+            this.venPrin.miMateriales.agregarOyentesBotones(this);
+            
+        }
     
 
         if(comando.equals("Centros"))
@@ -64,7 +71,7 @@ public class Controlador implements ActionListener
             //abrir una pagina web con el navegador por defecto
             try
             {
-                Runtime.getRuntime().exec("cmd.exe /c start https://blog.oxfamintermon.org/5-ideas-de-reciclaje-creativo/");
+                Runtime.getRuntime().exec("cmd.exe /c start https://www.ecoembes.com/es/reduce-reutiliza-y-recicla/beneficios-de-reciclar");
             }
             catch(Exception e)
             {
@@ -77,21 +84,27 @@ public class Controlador implements ActionListener
 
         if(comando.equals("volver"))
         {   
-            
             venPrin.miGuia.cerrarVentanaGuia();
-
-           
         }
 
-        if(comando.equals("tipos"))
+        if(comando.equals("volver2"))
         {   
-            
-           
-
-           
+            venPrin.miInfo.cerrarVentanaInfo();
         }
 
-        if(comando.equals("info"))
+        if(comando.equals("volver3"))
+        {   
+            venPrin.miCentros.cerrarVentanaCentros();
+        }
+
+        if(comando.equals("volver4"))
+        {   
+            venPrin.miMateriales.cerrarVentanaMateriales();
+        }
+
+      
+
+        if(comando.equals("masinfo"))
         {   
             //abrir una pagina web con el navegador por defecto
             try
@@ -103,10 +116,6 @@ public class Controlador implements ActionListener
                 JOptionPane.showMessageDialog(null, "No se pudo abrir la pagina web");
             }
             
-            
-           
-
-           
         }
        
 
