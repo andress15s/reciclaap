@@ -3,6 +3,7 @@ package vista;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import javax.swing.JComboBox;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -16,6 +17,9 @@ public class Materiales extends JDialog
     private ImageIcon iImagen;
     private JLabel lbImagen;
     private JButton btVolver;
+    private JLabel lImagen;
+    private ImageIcon iLogo;
+    private JLabel lbLogo;
     
    
  
@@ -40,14 +44,24 @@ public class Materiales extends JDialog
         cbMaterial.setBounds(310, 30, 330, 30);
         lbImagen.add(cbMaterial);
 
-        //crear una etiqueta para el material
-        JLabel lbMaterial = new JLabel("Materiales");
-        lbMaterial.setFont(new Font("Algerian", Font.BOLD, 20));
-        lbMaterial.setBounds(165, 30, 150, 30);
-        lbImagen.add(lbMaterial);
+        
+        // se agrega el logo
+        iLogo = new ImageIcon(getClass().getResource("imagenes/carton.png"));
+        lbLogo = new JLabel(iLogo);
+        lbLogo.setOpaque(true);//
+        lbLogo.setBorder(BorderFactory.createRaisedBevelBorder());
+        lbLogo.setBounds(114, 202, 290, 190);
+        
+
+        lbImagen.add(lbLogo);
 
 
-        //crear un contenedor para el material
+
+        
+        
+
+
+        
 
 
 
