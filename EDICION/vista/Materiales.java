@@ -43,6 +43,15 @@ public class Materiales extends JDialog
         JComboBox cbMaterial = new JComboBox();
         cbMaterial.setBounds(310, 30, 330, 30);
         lbImagen.add(cbMaterial);
+        //agregar los materiales al jcombobox
+        cbMaterial.addItem("Cartón");
+        cbMaterial.addItem("Plástico");
+        cbMaterial.addItem("Vidrio");
+        cbMaterial.addItem("Metal");
+        cbMaterial.addItem("Papel");
+        cbMaterial.addItem("Madera");
+        cbMaterial.addItem("Otros");
+
 
         
         // se agrega el logo
@@ -51,11 +60,48 @@ public class Materiales extends JDialog
         lbLogo.setOpaque(true);//
         lbLogo.setBorder(BorderFactory.createRaisedBevelBorder());
         lbLogo.setBounds(114, 202, 290, 190);
-        
-
         lbImagen.add(lbLogo);
 
-
+        //quiero que el logo cambie segun el material que se seleccione
+        cbMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                if(cbMaterial.getSelectedItem().equals("Cartón"))
+                {
+                    iLogo = new ImageIcon(getClass().getResource("imagenes/carton.png"));
+                    lbLogo.setIcon(iLogo);
+                }
+                else if(cbMaterial.getSelectedItem().equals("Plástico"))
+                {
+                    iLogo = new ImageIcon(getClass().getResource("imagenes/plastico.png"));
+                    lbLogo.setIcon(iLogo);
+                }
+                else if(cbMaterial.getSelectedItem().equals("Vidrio"))
+                {
+                    iLogo = new ImageIcon(getClass().getResource("imagenes/vidrio.png"));
+                    lbLogo.setIcon(iLogo);
+                }
+                else if(cbMaterial.getSelectedItem().equals("Metal"))
+                {
+                    iLogo = new ImageIcon(getClass().getResource("imagenes/metales.png"));
+                    lbLogo.setIcon(iLogo);
+                }
+                else if(cbMaterial.getSelectedItem().equals("Papel"))
+                {
+                    iLogo = new ImageIcon(getClass().getResource("imagenes/papel.png"));
+                    lbLogo.setIcon(iLogo);
+                }
+                else if(cbMaterial.getSelectedItem().equals("Madera"))
+                {
+                    iLogo = new ImageIcon(getClass().getResource("imagenes/madera.png"));
+                    lbLogo.setIcon(iLogo);
+                }
+                else if(cbMaterial.getSelectedItem().equals("Otros"))
+                {
+                    iLogo = new ImageIcon(getClass().getResource("imagenes/otros.png"));
+                    lbLogo.setIcon(iLogo);
+                }
+            }
+        });
 
         
         
