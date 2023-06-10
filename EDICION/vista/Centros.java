@@ -46,6 +46,8 @@ public class Centros extends JDialog
         btVolver.setBorderPainted(false);
         btVolver.setActionCommand("volver3");
 
+        // Crear botón 
+
 
 
 
