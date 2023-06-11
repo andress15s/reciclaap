@@ -117,6 +117,76 @@ public class Controlador implements ActionListener
             }
             
         }
+
+        if(comando.equals("ubicacion1"))
+        {   
+            //abrir una pagina web con el navegador por defecto
+            try
+            {
+                Runtime.getRuntime().exec("cmd.exe /c start https://goo.gl/maps/e2UsS12JafXoJ94A6");
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "No se pudo abrir la pagina web");
+            }
+            
+        }
+
+        if(comando.equals("ubicacion2"))
+        {   
+            //abrir una pagina web con el navegador por defecto
+            try
+            {
+                Runtime.getRuntime().exec("cmd.exe /c start https://goo.gl/maps/78xURi2VgeNNdAhB7");
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "No se pudo abrir la pagina web");
+            }
+            
+        }
+
+        if(comando.equals("ubicacion3"))
+        {   
+            //abrir una pagina web con el navegador por defecto
+            try
+            {
+                Runtime.getRuntime().exec("cmd.exe /c start https://goo.gl/maps/g22fvCX6yw8bWQTG8");
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "No se pudo abrir la pagina web");
+            }
+            
+        }
+
+        if(comando.equals("ubicacion4"))
+        {   
+            //abrir una pagina web con el navegador por defecto
+            try
+            {
+                Runtime.getRuntime().exec("cmd.exe /c start https://goo.gl/maps/u3qUEYXhvpAZQxQk6");
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "No se pudo abrir la pagina web");
+            }
+            
+        }
+
+        if(comando.equals("ubicacion5"))
+        {   
+            //abrir una pagina web con el navegador por defecto
+            try
+            {
+                Runtime.getRuntime().exec("cmd.exe /c start https://goo.gl/maps/8RZuA9LU6Euks9bt7");
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "No se pudo abrir la pagina web");
+            }
+            
+        }
        
 
         if(comando.equals("salir"))
