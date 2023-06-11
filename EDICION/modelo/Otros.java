@@ -1,5 +1,6 @@
 package modelo;
 
-public class Otros {
-    
+public class Otros extends Material
+{
+
 }
