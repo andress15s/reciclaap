@@ -60,15 +60,20 @@ public class Materiales extends JDialog
 
         //Creación y adicion del area de texto
         taResultado = new JTextArea();
-        taResultado.setEditable(true);
+        taResultado.setEditable(false);
         taResultado.setFont(new Font("Arial", Font.BOLD, 14));
         taResultado.setLineWrap(true);
         taResultado.setWrapStyleWord(true);
         taResultado.setBounds(500, 120, 290, 250);
         //taResultado.setBorder(BorderFactory.createRaisedBevelBorder());
-        taResultado.setOpaque(false);//
+        taResultado.setOpaque(false);
         lbImagen.add(taResultado);
-
+        //Creación y adición del scroll
+        spResultado = new JScrollPane(taResultado);
+        spResultado.setBounds(500, 120, 290, 250);
+        spResultado.setOpaque(false);
+        spResultado.getViewport().setOpaque(false);
+        lbImagen.add(spResultado);
         
         
 
@@ -90,36 +95,51 @@ public class Materiales extends JDialog
                 {
                     iLogo = new ImageIcon(getClass().getResource("imagenes/carton.png"));
                     lbLogo.setIcon(iLogo);
+                    //poner la descripcion dela clase carton en el text area
+                    taResultado.setText(new modelo.Carton().toString());
+                    
                 }
                 else if(cbMaterial.getSelectedItem().equals("Plástico"))
                 {
                     iLogo = new ImageIcon(getClass().getResource("imagenes/plastico.png"));
                     lbLogo.setIcon(iLogo);
+                    //poner la descripcion dela clase plastico en el text area
+                    taResultado.setText(new modelo.Plastico().toString());
                 }
                 else if(cbMaterial.getSelectedItem().equals("Vidrio"))
                 {
                     iLogo = new ImageIcon(getClass().getResource("imagenes/vidrio.png"));
                     lbLogo.setIcon(iLogo);
+                    //poner la descripcion dela clase vidrio en el text area
+                    taResultado.setText(new modelo.Vidrio().toString());
                 }
                 else if(cbMaterial.getSelectedItem().equals("Metal"))
                 {
                     iLogo = new ImageIcon(getClass().getResource("imagenes/metales.png"));
                     lbLogo.setIcon(iLogo);
+                    //poner la descripcion dela clase metal en el text area
+                    taResultado.setText(new modelo.Metal().toString());
                 }
                 else if(cbMaterial.getSelectedItem().equals("Papel"))
                 {
                     iLogo = new ImageIcon(getClass().getResource("imagenes/papel.png"));
                     lbLogo.setIcon(iLogo);
+                    //poner la descripcion dela clase papel en el text area
+                    taResultado.setText(new modelo.Papel().toString());
                 }
                 else if(cbMaterial.getSelectedItem().equals("Madera"))
                 {
                     iLogo = new ImageIcon(getClass().getResource("imagenes/madera.png"));
                     lbLogo.setIcon(iLogo);
+                    //poner la descripcion dela clase madera en el text area
+                    taResultado.setText(new modelo.Madera().toString());
                 }
                 else if(cbMaterial.getSelectedItem().equals("Otros"))
                 {
                     iLogo = new ImageIcon(getClass().getResource("imagenes/otros.png"));
                     lbLogo.setIcon(iLogo);
+                    //poner la descripcion dela clase otros en el text area
+                    taResultado.setText(new modelo.Otros().toString());
                 }
             }
         });
