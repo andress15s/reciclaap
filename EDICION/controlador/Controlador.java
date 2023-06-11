@@ -109,7 +109,7 @@ public class Controlador implements ActionListener
             //abrir una pagina web con el navegador por defecto
             try
             {
-                Runtime.getRuntime().exec("cmd.exe /c start https://www.ecoembes.com/es/residuos");
+                Runtime.getRuntime().exec("cmd.exe /c start https://uisreciclaap.blogspot.com/2023/06/el-reciclaje-es-el-proceso-de-convertir.html#more");
             }
             catch(Exception e)
             {

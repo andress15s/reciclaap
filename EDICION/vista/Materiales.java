@@ -48,6 +48,7 @@ public class Materiales extends JDialog
         cbMaterial.setBounds(310, 30, 330, 30);
         lbImagen.add(cbMaterial);
         //agregar los materiales al jcombobox
+        cbMaterial.addItem("Seleccione un material");
         cbMaterial.addItem("Cartón");
         cbMaterial.addItem("Plástico");
         cbMaterial.addItem("Vidrio");
@@ -64,16 +65,20 @@ public class Materiales extends JDialog
         taResultado.setFont(new Font("Arial", Font.BOLD, 14));
         taResultado.setLineWrap(true);
         taResultado.setWrapStyleWord(true);
-        taResultado.setBounds(500, 120, 290, 250);
-        //taResultado.setBorder(BorderFactory.createRaisedBevelBorder());
+        taResultado.setBounds(490, 90, 340, 310);
         taResultado.setOpaque(false);
         lbImagen.add(taResultado);
         //Creación y adición del scroll
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(500, 120, 290, 250);
+        spResultado.setBounds(490, 90, 340, 310);
         spResultado.setOpaque(false);
+        spResultado.getVerticalScrollBar().setValue(0);
         spResultado.getViewport().setOpaque(false);
         lbImagen.add(spResultado);
+        //poner un mensaje que se borre cuando seleccione el material
+        taResultado.setText("Seleccione un material para ver su descripción");
+        
+        
         
         
 
@@ -81,16 +86,18 @@ public class Materiales extends JDialog
 
         
         // se agrega el logo
-        iLogo = new ImageIcon(getClass().getResource("imagenes/carton.png"));
+        iLogo = new ImageIcon(getClass().getResource("imagenes/reciclaje.png"));
         lbLogo = new JLabel(iLogo);
-        lbLogo.setOpaque(true);//
+        lbLogo.setOpaque(true);
         lbLogo.setBorder(BorderFactory.createRaisedBevelBorder());
         lbLogo.setBounds(114, 202, 290, 190);
         lbImagen.add(lbLogo);
 
-        //quiero que el logo cambie segun el material que se seleccione
-        cbMaterial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        //se crea un oyente para el jcombobox
+        cbMaterial.addActionListener(new java.awt.event.ActionListener() 
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)//se crea un evento
+            {
                 if(cbMaterial.getSelectedItem().equals("Cartón"))
                 {
                     iLogo = new ImageIcon(getClass().getResource("imagenes/carton.png"));
@@ -146,27 +153,6 @@ public class Materiales extends JDialog
 
         
         
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
