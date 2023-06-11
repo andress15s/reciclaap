@@ -8,6 +8,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 
 
@@ -20,6 +22,8 @@ public class Materiales extends JDialog
     private JLabel lImagen;
     private ImageIcon iLogo;
     private JLabel lbLogo;
+    private JTextArea taResultado;
+    private JScrollPane spResultado;
     
    
  
@@ -32,7 +36,7 @@ public class Materiales extends JDialog
         //Definición del contenedor de la ventana
         setLayout(null);
 
-
+       
         //fondo de la ventana
         iImagen = new ImageIcon(getClass().getResource("imagenes/MATERIALES.PNG"));
         lbImagen = new JLabel(iImagen);
@@ -52,6 +56,23 @@ public class Materiales extends JDialog
         cbMaterial.addItem("Madera");
         cbMaterial.addItem("Otros");
 
+
+
+        //Creación y adicion del area de texto
+        taResultado = new JTextArea();
+        taResultado.setEditable(true);
+        taResultado.setFont(new Font("Arial", Font.BOLD, 14));
+        taResultado.setLineWrap(true);
+        taResultado.setWrapStyleWord(true);
+        taResultado.setBounds(500, 120, 290, 250);
+        //taResultado.setBorder(BorderFactory.createRaisedBevelBorder());
+        taResultado.setOpaque(false);//
+        lbImagen.add(taResultado);
+
+        
+        
+
+        
 
         
         // se agrega el logo
