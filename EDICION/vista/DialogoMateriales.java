@@ -13,7 +13,7 @@ import javax.swing.JTextArea;
 
 
 
-public class Materiales extends JDialog
+public class DialogoMateriales extends JDialog
 {   
     //atributos
     private ImageIcon iImagen;
@@ -31,7 +31,7 @@ public class Materiales extends JDialog
 
 
     //metodos constructor
-    public Materiales()
+    public DialogoMateriales()
     {
         //Definición del contenedor de la ventana
         setLayout(null);

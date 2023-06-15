@@ -13,10 +13,10 @@ public class VentanaPrincipal extends JFrame
     //----------------------
   
     public PanelEntradaDatos miPanelEntradaDatos;
-    public Informacion miInfo;
-    public Guia miGuia;
-    public Centros miCentros;
-    public Materiales miMateriales;
+    public DialogoInformacion miInfo;
+    public DialogoGuia miGuia;
+    public DialogoCentros miCentros;
+    public DialogoMateriales miMateriales;
     
  
 
@@ -63,20 +63,20 @@ public class VentanaPrincipal extends JFrame
 
     public void crearVentanaInformacion()
     {
-        miInfo = new Informacion();
+        miInfo = new DialogoInformacion();
     }
 
     
     public void crearVentanaGuia()
     {
-        miGuia = new Guia();
+        miGuia = new DialogoGuia();
     }
 
    
 
     public void crearVentanaCentros()
     {
-        miCentros = new Centros();
+        miCentros = new DialogoCentros();
        
         
         
@@ -84,7 +84,7 @@ public class VentanaPrincipal extends JFrame
 
     public void crearVentanaMateriales()
     {
-        miMateriales = new Materiales();
+        miMateriales = new DialogoMateriales();
     }
     
 
