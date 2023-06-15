@@ -66,7 +66,7 @@ public class Controlador implements ActionListener
             this.venPrin.miCentros.agregarOyentesBotones(this);
         }
 
-        if(comando.equals("ideas"))
+        if(comando.equals("ideas")) 
         {   
             //abrir una pagina web con el navegador por defecto
             try
